@@ -68,7 +68,17 @@ public class Product {
 	}
 
 	public void setPrice(double price) {
-		this.price = price;
+		/** If price is between 0 and 1000 then field price show price,
+		 * else if price is > 1000 then field price show 1000
+		 * else if price is < 0 then field price show 0
+		 */
+		if (price >= 0 && price <= 1000) {
+			this.price = price;
+		} else if (price > 1000) {
+			this.price = 1000;
+		} else if (price < 0) {
+			this.price = 0;
+		}
 	}
 
 	/** method for get inventory price on sheet "détail"  product :
