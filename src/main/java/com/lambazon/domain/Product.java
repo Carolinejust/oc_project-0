@@ -63,8 +63,10 @@ public class Product {
 		this.price = price;
 	}
 
+	/** method for get inventory price on sheet "détail"  product :
+	 * price x quantity
+	*/
 	public double getInventoryPrice() {
-		// TODO Auto-generated method stub
-		return 0.0;
+		return price * quantity;
 	}
 }
