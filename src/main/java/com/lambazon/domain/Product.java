@@ -52,8 +52,16 @@ public class Product {
 	}
 
 	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+		/**
+		 * If quantity is >= 0 then field quantity show quantity else fiels quantity show 0.
+		 */
+		if (quantity >= 0) {
+			this.quantity = quantity;
+		} else {
+			this.quantity = 0;
+		}
 	}
+
 
 	public double getPrice() {
 		return price;
