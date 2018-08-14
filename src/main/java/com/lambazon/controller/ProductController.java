@@ -31,9 +31,11 @@ public class ProductController {
 	}
 	
 	private double calculateTotalInventoryAmount() {
-		// TODO Auto-generated method stub
-		// return 123456.78;
-		
+		/** By défault, the variable "totalInventoryAmount" = 0
+		 * With the loop "For", the variable "totalInventoryAmount" is increment.
+		 * For one product p ,totalInventoryAmount = totalInventoryAmount + InventoryPrice of p
+		 * The loop finish when the number of loop = the number of product p
+		 */
 		double totalInventoryAmount = 0.0;
 		for (Product p : productService.products()) {
 			totalInventoryAmount+=p.getInventoryPrice();
